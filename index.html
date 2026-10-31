@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4eadb">
+  <title>منوی کافه eNd</title>
+  <style>
+    :root {
+      --cream: #f4eadb;
+      --paper: #fffaf2;
+      --cherry: #702b3b;
+      --olive: #69704a;
+      --terracotta: #bd7967;
+      --ink: #29251f;
+      --muted: #786f65;
+      --line: #e4d6c4;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; background: var(--cream); color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Tahoma, Arial, sans-serif;
+      line-height: 1.7;
+    }
+    .page { width: min(760px, 100%); margin: 0 auto; padding: 24px 16px 44px; }
+    header {
+      text-align: center; padding: 30px 18px 24px; margin-bottom: 20px;
+      background: var(--paper); border: 1px solid var(--line);
+      border-radius: 18px; position: relative; overflow: hidden;
+    }
+    header::before, header::after {
+      content: ""; position: absolute; width: 76px; height: 76px;
+      border: 1px solid var(--terracotta); border-radius: 50%; opacity: .65;
+    }
+    header::before { top: -42px; right: -26px; }
+    header::after { bottom: -46px; left: -26px; }
+    .brand {
+      font-family: Georgia, "Times New Roman", serif; font-size: clamp(52px, 12vw, 76px);
+      line-height: 1.1; color: var(--cherry); letter-spacing: -3px; font-weight: 600;
+    }
+    .subtitle { margin: 8px 0 0; color: var(--olive); font-size: 14px; letter-spacing: .08em; }
+    .note { color: var(--muted); font-size: 12px; margin-top: 8px; }
+    .category {
+      background: var(--paper); border: 1px solid var(--line); border-radius: 16px;
+      padding: 18px 18px 8px; margin: 14px 0;
+    }
+    h2 {
+      color: var(--cherry); font-size: 19px; margin: 0 0 8px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    h2::after { content: ""; height: 1px; background: var(--line); flex: 1; }
+    .item {
+      display: flex; align-items: baseline; justify-content: space-between; gap: 14px;
+      padding: 12px 0; border-bottom: 1px dashed var(--line);
+    }
+    .item:last-child { border-bottom: 0; }
+    .name { font-size: 15px; font-weight: 550; }
+    .desc { font-size: 12px; color: var(--muted); display: block; }
+    .price { white-space: nowrap; color: var(--olive); font-size: 14px; font-weight: 700; }
+    footer { text-align: center; color: var(--muted); font-size: 12px; padding-top: 18px; }
+    .edit-hint {
+      background: #f9e8df; border: 1px solid #e8c6b9; color: #643a31;
+      border-radius: 12px; padding: 12px 14px; font-size: 13px; margin-bottom: 16px;
+    }
+    @media (min-width: 640px) { .page { padding-top: 40px; } .category { padding: 22px 24px 10px; } }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <div class="brand">eNd</div>
+      <p class="subtitle">منوی کافه</p>
+      <div class="note">قیمت‌ها به ریال ایران</div>
+    </header>
+
+    <div class="edit-hint">
+      این نسخه، نمونه اولیه است. قیمت‌ها فعلاً خالی گذاشته شده‌اند تا قیمت واقعی هر محصول را وارد کنیم.
+    </div>
+
+    <section class="category">
+      <h2>قهوه‌های گرم</h2>
+      <div class="item"><div><span class="name">اسپرسو</span></div><span class="price">— ریال</span></div>
+      <div class="item"><div><span class="name">آمریکانو</span></div><span class="price">— ریال</span></div>
+      <div class="item"><div><span class="name">کاپوچینو</span></div><span class="price">— ریال</span></div>
+      <div class="item"><div><span class="name">لاته</span></div><span class="price">— ریال</span></div>
+      <div class="item"><div><span class="name">موکا</span></div><span class="price">— ریال</span></div>
+    </section>
+
+    <section class="category">
+      <h2>قهوه‌های سرد</h2>
+      <div class="item"><div><span class="name">آیس آمریکانو</span></div><span class="price">— ریال</span></div>
+      <div class="item"><div><span class="name">آیس لاته</span></div><span class="price">— ریال</span></div>
+      <div class="item"><div><span class="name">آیس موکا</span></div><span class="price">— ریال</span></div>
+      <div class="item"><div><span class="name">آیس کارامل ماکیاتو</span></div><span class="price">— ریال</span></div>
+    </section>
+
+    <section class="category">
+      <h2>ماکتیل و نوشیدنی‌های سرد</h2>
+      <div class="item"><div><span class="name">استرابری موهیتو</span></div><span class="price">— ریال</span></div>
+      <div class="item"><div><span class="name">رد بری</span></div><span class="price">— ریال</span></div>
+      <div class="item"><div><span class="name">بلو لاگون</span></div><span class="price">— ریال</span></div>
+      <div class="item"><div><span class="name">پینا کولادا بدون الکل</span></div><span class="price">— ریال</span></div>
+    </section>
+
+    <footer>با عشق، کافه eNd</footer>
+  </main>
+</body>
+</html>
